@@ -1,6 +1,6 @@
 | Command                                      | What it does                                      |
 |----------------------------------------------|---------------------------------------------------|
-| GIT                                          |                                                   |
+| **GIT**                                      |                                                   |
 | `git status`                                 | Shows changes                                     |
 | `git switch main`                            | Go to main                                        |
 | `git switch -c feature/name`                 | Create new branch                                 |
