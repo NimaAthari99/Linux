@@ -56,7 +56,7 @@ git config --global user.email "your-email@gmail.com"
 2. Click green **Code** button → copy **HTTPS** link.
 
 
-
+<img src="/assets/images/https-url-clone-cli.png" alt="GitHub Code Button" width="800">
 
 3. In Terminal:
 
@@ -88,6 +88,8 @@ git push -u origin feature/add-login-page   # first time
 git push                                    # next times
 ```
 
+
+<img src="/assets/images/Local-Remote-Repo.webp" alt="Local-Remote-Repo" width="800">
 
 
 
@@ -134,6 +136,13 @@ git pull
 
 # 2. Delete your local branch (safe way)
 git branch -d feature/add-login-page
+
+
+<img src="/assets/images/open-a-pull-request_crop.png" alt="open-a-pull-request_crop" width="800">
+
+
+
+
 
 # If Git says "not fully merged" and you are sure it's safe, use force:
 git branch -D feature/add-login-page
