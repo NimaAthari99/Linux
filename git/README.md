@@ -1,8 +1,8 @@
-**Git for Absolute Beginners – Complete Step-by-Step Guide (2026)**
+# Git for Absolute Beginners – Complete Step-by-Step Guide (2026)
 
 Hello! This guide is made for **complete beginners**.  
 Every step is short, clear, and safe. Follow exactly and you will never get stuck.  
-Now Let's Start!
+Let's Start!
 
 ### 1. What is Git?
 
@@ -12,7 +12,7 @@ It lets you:
 - Go back to any old version if you make a mistake
 - Work together with friends without breaking each other’s code
 
-Think of it like the “History” button in Google Docs, but much more powerful.
+Think of it like the “***History***” button in Google Docs, but much more powerful.
 
 ### 2. What is a Branch?
 
@@ -25,7 +25,7 @@ A **branch** is like a safe side road for your code.
 
 **Never work directly on the `main` branch!**
 
-
+<img src="/assets/images/Project-Workflow.webp" alt="Project-Workflow" width="700" >
 
 
 **Simple picture:**
@@ -56,7 +56,8 @@ git config --global user.email "your-email@gmail.com"
 2. Click green **Code** button → copy **HTTPS** link.
 
 
-<img src="/assets/images/https-url-clone-cli.png" alt="GitHub Code Button" width="800">
+<img src="/assets/images/https-url-clone-cli.png" alt="https-url-clone-cli" width="700" >
+
 
 3. In Terminal:
 
@@ -88,29 +89,45 @@ git push -u origin feature/add-login-page   # first time
 git push                                    # next times
 ```
 
-
-<img src="/assets/images/Local-Remote-Repo.webp" alt="Local-Remote-Repo" width="800">
-
+<img src="/assets/images/Local-Remote-Repo.webp" alt="Local-Remote-Repo" width="700" >
 
 
-### 7. How to Bring Changes from Your Branch to Main
+### 7. What is "origin"?
+
+**origin** is a **short name (nickname)** that Git automatically gives to your remote repository on GitHub.
+
+When you do `git clone`, Git creates this name "origin" and saves the full GitHub URL inside it.
+
+**Why do we use it?**  
+Instead of typing the long URL every time, you just write `origin`.
+
+**Simple rule:**  
+`origin` = "my GitHub project"
+
+**Real examples:**
+- `git push -u origin feature/login` → send my work to GitHub
+- `git push origin --delete feature/old` → delete branch from GitHub
+- `git pull origin main` → get latest code from GitHub
+
+You can have other remotes (like "upstream"), but **origin** is the default and the one you will use 95% of the time.
+
+### 8. How to Bring Changes from Your Branch to Main
 
 #### Best & Safest Way: Pull Request on GitHub
 
 1. Push your branch.
-2. Go to GitHub → you will see **“Compare & pull request”** button. Click it.
+2. Go to GitHub → click **“Compare & pull request”**.
 
 
 
 
-3. Make sure Base = `main`, Compare = your branch.  
+3. Make sure Base = `main`.  
 4. Write title and description.  
-5. Click **Create pull request**.  
-6. After review, click **Merge pull request** → **Confirm merge**.
+5. Click **Create pull request** → after review click **Merge pull request**.
 
-GitHub will ask: “Would you like to delete this branch?” → Click **Delete branch** (very easy!).
+GitHub will ask if you want to delete the branch → click **Delete branch**.
 
-#### Simple Way (Terminal – only if you work alone)
+#### Simple Way (Terminal – only if alone)
 
 ```bash
 git switch main
@@ -119,46 +136,25 @@ git merge feature/add-login-page
 git push
 ```
 
-### 8. How to Delete a Branch (Clean Up – Very Important!)
+### 9. How to Delete a Branch (Clean Up)
 
-After your changes are safely in `main`, delete the old branch so your repository stays clean.
+#### On GitHub (Easiest)
+After merging Pull Request, click the green **“Delete branch”** button.
 
-#### A. Delete on GitHub (Easiest – Recommended)
-
-After merging the Pull Request, GitHub shows a green button **“Delete branch”**. Just click it. Done!
-
-#### B. Delete Using Terminal
+#### Using Terminal
 
 ```bash
-# 1. Go to main and update
 git switch main
 git pull
 
-# 2. Delete your local branch (safe way)
+# Safe delete
 git branch -d feature/add-login-page
 
-
-<img src="/assets/images/open-a-pull-request_crop.png" alt="open-a-pull-request_crop" width="800">
-
-
-
-
-
-# If Git says "not fully merged" and you are sure it's safe, use force:
-git branch -D feature/add-login-page
-
-# 3. Delete the branch from GitHub (remote)
+# Delete from GitHub
 git push origin --delete feature/add-login-page
 ```
 
-**Tip:**  
-- Use `-d` first (safe). It only deletes if changes are already in `main`.  
-- Use `-D` only when you really want to throw it away.
-
-
-
-
-### 9. Most Useful Commands
+### 10. Most Useful Commands
 
 | Command                                      | What it does                                      |
 |----------------------------------------------|---------------------------------------------------|
@@ -169,27 +165,15 @@ git push origin --delete feature/add-login-page
 | `git commit -m "message"`                    | Save work                                         |
 | `git push`                                   | Send to GitHub                                    |
 | `git pull`                                   | Get latest code                                   |
-| `git branch`                                 | List branches                                     |
-| `git branch -d feature/name`                 | Delete local branch (safe)                        |
-| `git push origin --delete feature/name`      | Delete remote branch                              |
-| `git log --oneline --graph`                  | See history                                       |
+| `git branch -d name`                         | Delete local branch (safe)                        |
+| `git push origin --delete name`              | Delete remote branch                              |
 
-### 10. Best Practices
+### 11. Best Practices
 
-- Always `git pull` on `main` before starting new work  
-- Always create a new branch for every task  
-- Keep branches small (1–3 days)  
-- Write clear English commit messages  
-- Use Pull Requests when working with others  
-- Delete branches after merging (keeps everything clean!)  
+- Always `git pull` on `main` before new work  
+- Always create a new branch  
+- Keep branches small  
+- Use Pull Requests with others  
+- Delete branches after merging  
 - Never push broken code to `main`
 
-### 11. Common Problems & Fixes
-
-- “not a git repository” → Run `cd project-name` first  
-- Permission denied → Use HTTPS link  
-- Something broke? Run `git status` and ask for help  
-
-
-
-### I'll beglad to have your opinions and ideas to becom expert in devops to ***help & prove*** each other.
