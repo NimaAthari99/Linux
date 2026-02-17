@@ -1,3 +1,9 @@
+
+
+<img src="/assets/images/git-workflow.jpg" alt="git-workflow" width="700" >
+
+
+
 # Git for Absolute Beginners – Complete Step-by-Step Guide (2026)
 
 Hello! This guide is made for **complete beginners**.  
@@ -118,6 +124,8 @@ You can have other remotes (like "upstream"), but **origin** is the default and 
 1. Push your branch.
 2. Go to GitHub → click **“Compare & pull request”**.
 
+
+<img src="/assets/images/open-a-pull-request_crop.png" alt="open-a-pull-request_crop" width="700" >
 
 
 
