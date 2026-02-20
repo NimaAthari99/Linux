@@ -1,14 +1,21 @@
-| Command                                      | What it does                                      |
-|----------------------------------------------|---------------------------------------------------|
-| **GIT**                                      |                                                   |
-| `git status`                                 | Shows changes                                     |
-| `git switch main`                            | Go to main                                        |
-| `git switch -c feature/name`                 | Create new branch                                 |
-| `git add .`                                  | Prepare changes                                   |
-| `git commit -m "message"`                    | Save work                                         |
-| `git push`                                   | Send to GitHub                                    |
-| `git pull`                                   | Get latest code                                   |
-| `git branch`                                 | List branches                                     |
-| `git branch -d feature/name`                 | Delete local branch (safe)                        |
-| `git push origin --delete feature/name`      | Delete remote branch                              |
-| `git log --oneline --graph`                  | See history                                       |
+### Most Useful Git Commands (2026 Edition)
+
+| Command                                                      | What it does (Simple & Clear)                                                                 | When to use it                                      |
+|--------------------------------------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------|
+| `git status`                                                 | Shows which files are changed, staged, or untracked                                           | **Always** — before every commit                    |
+| `git add .`                                                  | Stage (prepare) **all** new and modified files in current folder                              | Most common way to stage changes                    |
+| `git add -u`                                                 | Stage only **modified and deleted** files (ignores completely new files)                      | When you edited or deleted files only               |
+| `git add -A`                                                 | Stage **everything** (new, modified, deleted files — even in subfolders)                      | When you added new folders or deleted files         |
+| `git remote set-url origin git@github.com:USERNAME/REPO.git` | Change the URL of your "origin" remote (e.g. switch from HTTPS to SSH)                        | When you want to change from HTTPS to SSH           |
+| `git switch main`                                            | Switch to the main branch                                                                     | Before creating a new branch or pulling             |
+| `git switch -c feature/name`                                 | Create a new branch and switch to it                                                          | Every time you start a new task                     |
+| `git commit -m "Clear message"`                              | Save your staged changes with a message                                                       | After `git add`                                     |
+| `git push`                                                   | Upload your commits to GitHub (to the current branch)                                         | After commit — sends your work online               |
+| `git pull`                                                   | Download latest changes from GitHub and merge them                                            | Before starting new work                            |
+| `git pull --rebase origin main`                              | Download latest changes and **replay** your commits on top (cleaner history)                  | When you want a very clean linear history           |
+| `git branch`                                                 | List all local branches                                                                       | To see what branches you have                       |
+| `git branch -a`                                              | List all branches (local + remote)                                                            | To see remote branches too                          |
+| `git branch -d feature/name`                                 | Delete a local branch **safely** (only if already merged)                                     | After your Pull Request is merged                   |
+| `git branch -D feature/name`                                 | Force delete a local branch (even if not merged)                                              | When you want to throw away a branch                |
+| `git push origin --delete feature/name`                      | Delete a branch from GitHub (remote)                                                          | Clean up after merging                              |
+| `git log --oneline --graph --all`                            | Show beautiful history of all branches                                                        | To see the full picture of your project             |
