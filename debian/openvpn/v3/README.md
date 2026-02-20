@@ -8,7 +8,7 @@ openvpn3 config-import --config Brandon.ovpn --name <MY_CONFIG_NAME> --persisten
 
 Note: The <MY_CONFIG_NAME> (configuration file) is an "alias name" associated with your connection profile (.ovpn file).
 
-For listing all connections:
+For listing all cnfigs:
 ```bash
 openvpn3 configs-list
 ```
