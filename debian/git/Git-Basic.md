@@ -1,4 +1,4 @@
-# Git Basics – Step-by-Step Guide
+# Git Basics
 
 This guide explains how to set up Git, connect to GitHub using **SSH** (recommended), and safely push your changes.
 
