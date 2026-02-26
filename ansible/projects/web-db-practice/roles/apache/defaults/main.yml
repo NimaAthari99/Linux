@@ -1,0 +1,9 @@
+---
+# site name variables
+sub: apache01
+domain: domain
+tld: local
+
+sub: apache02
+domain: domain
+tld: local

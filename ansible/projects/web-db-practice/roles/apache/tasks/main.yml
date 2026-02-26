@@ -1,0 +1,39 @@
+---
+- name: "apt-get update"
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Install tools
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ packages }}"
+  tags: install_packages
+
+- name: Apache2 Latest Version Install
+  apt: name=apache2 state=latest
+  tags: install_apache2
+
+- name: delete default apache2 site
+  file:
+    path: /etc/apache2/sites-enabled/default
+    state: absent
+  notify: restart apache2
+  tags: configure_apache2
+
+- name: copy apache2 site.conf
+  template:
+    src: site.conf.j2
+    dest: /etc/apache2/conf.d/{{ domain }}.conf
+    owner: root
+    group: root
+    mode: '0644'
+  notify: restart apache2
+  tags: configure_apache2
+
+- name: start apache2
+  service:
+    name: apache2
+    state: started
+  tags: configure_apache2
