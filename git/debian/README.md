@@ -88,8 +88,9 @@ git switch -c feature/add-login-page
 # 4. Save changes
 git status
 git add .
-git commit -m "Add login page with nice button"
-
+        git commit -m "Add login page with nice button"
+    OR if you want to delete some files:
+        git commit . -m "Add login page with nice button"
 # 5. Send to GitHub
 git push -u origin feature/add-login-page   # first time
 git push                                    # next times
@@ -171,6 +172,7 @@ git push origin --delete feature/add-login-page
 | `git switch -c feature/name`                 | Create new branch                                 |
 | `git add .`                                  | Prepare changes                                   |
 | `git commit -m "message"`                    | Save work                                         |
+| `git commit . -m "message"`                  | Save work & deleted files                         |
 | `git push`                                   | Send to GitHub                                    |
 | `git pull`                                   | Get latest code                                   |
 | `git branch -d name`                         | Delete local branch (safe)                        |
