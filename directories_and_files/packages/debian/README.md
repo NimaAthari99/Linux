@@ -1,0 +1,11 @@
+# Package List
+- vim
+- vi
+- nano
+- wget
+- git
+- net-tools
+- bash-completion
+- ansible
+- ssh
+- zsh
