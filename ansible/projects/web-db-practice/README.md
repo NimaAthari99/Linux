@@ -1,4 +1,5 @@
-# Setting up 2 nginx servers & 2 apache servers & 1 sql server vagrant machines using ansible and config them by ansible configuration file path:/home/nimaathari/TUTORIALs/Arvan_Cloud/Begginer/Projects/Ansible/nginx-practices. Configuration instruction is available in my github in ""
+# WEB-DB-Practice
+Setting up 2 nginx servers & 2 apache servers & 1 sql server vagrant machines using ansible and config them by ansible configuration file path:/home/nimaathari/TUTORIALs/Arvan_Cloud/Begginer/Projects/Ansible/nginx-practices. Configuration instruction is available in my github in ""
 
 # Inventory Description
 ## Machines details
