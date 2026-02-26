@@ -1,0 +1,9 @@
+# Package List
+packages:
+    - vim
+    - wget
+    - git
+    - net-tools
+    - bash-completion
+    - ansible
+    - ssh

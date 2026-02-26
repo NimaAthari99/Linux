@@ -1,0 +1,17 @@
+---
+# site name variables
+sub: nginx01
+domain: domain
+tld: local
+
+sub: nginx02
+domain: domain
+tld: local
+
+sub: apache01
+domain: domain
+tld: local
+
+sub: apache02
+domain: domain
+tld: local

@@ -1,0 +1,54 @@
+IMAGE_ubuntu_2204   = "bento/ubuntu-22.04"
+IMAGE_Debian_12     = "bento/debian-12"
+
+ENV['VAGRANT_NO_PARALLEL'] = 'yes'
+
+Vagrant.configure(2) do |config|
+  #config.vm.provision "shell", path: "bootstrap.sh"
+
+  NodeType1 = 1
+  (1..NodeType1).each do |ansible_nginx|
+    config.vm.define "nginx#{ansible_nginx}" do |ansible_nginx_vm|
+      ansible_nginx_vm.vm.box = IMAGE_Debian_12
+      ansible_nginx_vm.vm.hostname = "nginx#{ansible_nginx}.nima.local"
+      ansible_nginx_vm.vm.network "private_network", ip: "192.168.56.1#{ansible_nginx}"
+      ansible_nginx_vm.vm.provider "virtualbox" do |v|
+        v.name = "nginx#{ansible_nginx}"
+        v.memory = 1024
+        v.cpus = 1
+      end
+      # ansible_vm.vm.provision "shell", path: "bootstrap_t1.sh"
+    end
+  end
+
+  NodeType1 = 0
+  (1..NodeType1).each do |ansible_apache2|
+    config.vm.define "apache#{ansible_apache2}" do |ansible_apache2_vm|
+      ansible_apache2_vm.vm.box = IMAGE_ubuntu_2204
+      ansible_apache2_vm.vm.hostname = "apache#{ansible_apache2}.nima.local"
+      ansible_apache2_vm.vm.network "private_network", ip: "192.168.56.6#{ansible_apache2}"
+      ansible_apache2_vm.vm.provider "virtualbox" do |v|
+        v.name = "apache#{ansible_apache2}"
+        v.memory = 1024
+        v.cpus = 1
+      end
+      # ansible_vm.vm.provision "shell", path: "bootstrap_t1.sh"
+    end
+  end
+
+
+  NodeType2 = 1
+  (1..NodeType2).each do |ansible_sql|
+    config.vm.define "sql#{ansible_sql}" do |ansible_sql_vm|
+      ansible_sql_vm.vm.box = IMAGE_ubuntu_2204
+      ansible_sql_vm.vm.hostname = "sql#{ansible_sql}.nima.local"
+      ansible_sql_vm.vm.network "private_network", ip: "192.168.56.10#{ansible_sql}"
+      ansible_sql_vm.vm.provider "virtualbox" do |v|
+        v.name = "sql#{ansible_sql}"
+        v.memory = 1024
+        v.cpus = 1
+      end
+      # type2_vm.vm.provision "shell", path: "bootstrap_t2.sh"
+    end
+  end
+end
