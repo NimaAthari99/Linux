@@ -2,14 +2,15 @@
 
 ### Install requirements basic tools: 
  ```bash 
-apt install -y wget git vim bash-completion curl htop net-tools dnsutils atop sudo software-properties-common telnet axel jq iotop ca-certificates curl gnupg lsb-release apt-transport-https gpg 
+apt install wget git vim bash-completion curl htop net-tools dnsutils atop sudo software-properties-common telnet axel jq iotop ca-certificates curl gnupg lsb-release apt-transport-https gpg -y
 ``` 
 
 ##### Get gpg key and add docker repositroy: 
 
 Add Docker’s official GPG key: 
 ```bash 
-sudo mkdir -p /etc/apt/keyrings && sudo chmod -R 0755 /etc/apt/keyrings 
+sudo mkdir -p /etc/apt/keyrings
+sudo chmod -R 0755 /etc/apt/keyrings 
 curl -fsSL "https://download.docker.com/linux/debian/gpg" | gpg --dearmor --yes -o /etc/apt/keyrings/docker.gpg 
 ``` 
 
@@ -41,32 +42,32 @@ sudo apt-get update
 
 ### Install Docker 
 ```bash 
-apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin docker-buildx-plugin docker-ce-rootless-extras docker-scan-plugin 
+apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin docker-buildx-plugin docker-ce-rootless-extras docker-scan-plugin -y
 ``` 
 
 ### Configuration docker 
 ```bash 
 # Check docker config directory 
-    [[ -d /etc/docker ]] || mkdir /etc/docker 
+[[ -d /etc/docker ]] || mkdir /etc/docker 
 
 sudo vim /etc/docker/daemon.json 
 # Add registry mirrors
-    <SOF>
-    { 
-        "registry-mirrors": ["https://hub.mecan.ir","https://hub.hamdocker.ir"] 
-    } 
-    <EOF>
+<SOF>
+{ 
+    "registry-mirrors": ["https://hub.mecan.ir","https://hub.hamdocker.ir"] 
+} 
+<EOF>
 
 # Watch changes
-    cat /etc/docker/daemon.json 
-    { 
-        "registry-mirrors": ["https://hub.mecan.ir","https://hub.hamdocker.ir"] 
-    } 
+cat /etc/docker/daemon.json 
+{ 
+    "registry-mirrors": ["https://hub.mecan.ir","https://hub.hamdocker.ir"] 
+} 
  
 # Restart docker service 
-    systemctl restart docker 
-    systemctl enable docker 
-    systemctl status docker 
+systemctl restart docker 
+systemctl enable docker 
+systemctl status docker 
 ``` 
 
 ### To create the docker group and add your user: 

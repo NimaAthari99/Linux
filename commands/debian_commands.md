@@ -19,3 +19,27 @@
 | `git branch -D feature/name`                                 | Force delete a local branch (even if not merged)                                              | When you want to throw away a branch                |
 | `git push origin --delete feature/name`                      | Delete a branch from GitHub (remote)                                                          | Clean up after merging                              |
 | `git log --oneline --graph --all`                            | Show beautiful history of all branches                                                        | To see the full picture of your project             |
+| `docker compose ps`                            |                                                         |               |
+| `docker compose ps -a`                            |                                                         |               |
+| `docker compose images`                            |                                                         |               |
+| `docker compose build`                            |                                                         |               |
+| `docker compose up -d`                            |                                                         |               |
+| `docker compose up --force-recreate *elasticsearch`                            |                                                         |               |
+| `docker compose down`                            |                                                         |               |
+| `docker compose down --remove-orphans`                            |                                                         |               |
+| `docker compose logs elasticsearch --tail=100`                            |                                                         |               |
+| `docker logs *mysql `                            |                                                         |               |
+| `docker rm -f *mysql `                            |                                                         |               |
+| `docker run -d --name mysql -e MYSQL_ROOT_PASSWORD=*Aa123456 mysql:5.7`                            |                                                         |               |
+| `docker run –d --name mysql_container -v mysql_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=Aa123456 mysql:57`                            |                                                         |               |
+| `docker exec -it *mysql bash`                            |                                                         |               |
+| `docker volume ls `                            |                                                         |               |
+| `docker volume inspect *mysql_data  `                            |                                                         |               |
+| `docker network ls`                            |                                                         |               |
+| `docker network create *elk_net`                            |                                                         |               |
+| `mysql –u root –p`                            |                                                         |               |
+| `show databases;`                            |                                                         |               |
+| `create database *db01;`                            |                                                         |               |
+| `bento list`                            |                                                         |               |
+| `bento test`                            |                                                         |               |
+| `bento upload`                            |                                                         |               |
