@@ -1,4 +1,4 @@
-### Most Useful Git Commands (2026 Edition)
+### Some Debian Commands
 
 | Command                                                      | What it does (Simple & Clear)                                                                 | When to use it                                      |
 |--------------------------------------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------|
@@ -31,7 +31,7 @@
 | `docker logs *mysql `                            |                                                         |               |
 | `docker rm -f *mysql `                            |                                                         |               |
 | `docker run -d --name mysql -e MYSQL_ROOT_PASSWORD=*Aa123456 mysql:5.7`                            |                                                         |               |
-| `docker run –d --name mysql_container -v mysql_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=Aa123456 mysql:57`                            |                                                         |               |
+| `docker run –d --name mysql_container -v mysql_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=*Aa123456 mysql:57`                            |                                                         |               |
 | `docker exec -it *mysql bash`                            |                                                         |               |
 | `docker volume ls `                            |                                                         |               |
 | `docker volume inspect *mysql_data  `                            |                                                         |               |
