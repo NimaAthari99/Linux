@@ -1,0 +1,80 @@
+# Not Modernized
+# mecan.ir Docker For Debian Bookworm
+deb [arch=amd64 signed-by=/etc/apt/keyrings/docker.gpg] https://repo.mecan.ir/repository/debian-docker bookworm stable
+
+
+# hashicorp.com Hashicorp For Debian Forky
+deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com forky main
+
+
+# hashicorp.com Hashicorp For Debian Forky
+deb [signed-by=/etc/apt/keyrings/openvpn-repo.gpg] https://build.openvpn.net/debian/openvpn/stable bookworm main
+
+
+# anydesk.com Anydesk For All
+deb [signed-by=/etc/apt/keyrings/keys.anydesk.com.asc] https://deb.anydesk.com all main
+
+
+# Debian 13 (Trixie)
+# iut.ac.ir Debian Trixie For Debian 13
+deb http://repo.iut.ac.ir/debian/ trixie main
+deb http://repo.iut.ac.ir/debian/ trixie-updates main
+
+# ito.gov.ir Debian Trixie For Debian 13
+deb https://archive.ito.gov.ir/debian/ trixie main contrib non-free non-free-firmware
+deb https://archive.ito.gov.ir/debian/ trixie-updates main contrib non-free non-free-firmware
+deb https://archive.ito.gov.ir/debian/ trixie-proposed-updates main contrib non-free non-free-firmware
+deb https://archive.ito.gov.ir/debian/ trixie-backports main contrib non-free non-free-firmware
+deb https://archive.ito.gov.ir/debian/ trixie-backports-sloppy main contrib non-free non-free-firmware
+
+
+# Debian 12 (Bookworm)
+# debian.org Debian Bookworm For Debian 12
+deb-src http://deb.debian.org/debian-security/ bookworm-security main contrib non-free non-free-firmware
+deb http://deb.debian.org/debian-security/ bookworm-security main contrib non-free non-free-firmware
+
+# ito.gov.ir Debian Bookworm For Debian 12
+deb https://archive.ito.gov.ir/debian/ bookworm main contrib non-free non-free-firmware
+deb https://archive.ito.gov.ir/debian/ bookworm-updates main contrib non-free non-free-firmware
+deb https://archive.ito.gov.ir/debian/ bookworm-proposed-updates main contrib non-free non-free-firmware
+deb https://archive.ito.gov.ir/debian/ bookworm-backports main contrib non-free non-free-firmware
+deb https://archive.ito.gov.ir/debian/ bookworm-backports-sloppy main contrib non-free non-free-firmware
+
+# shatel.ir Debian Bookworm For Debian 12
+deb-src http://mirror.shatel.ir/debian bookworm main contrib non-free non-free-firmware
+deb http://mirror.shatel.ir/debian-security bookworm-security main contrib non-free non-free-firmware
+deb-src http://mirror.shatel.ir/debian-security bookworm-security main contrib non-free non-free-firmware
+deb-src http://mirror.shatel.ir/debian bookworm-updates main contrib non-free non-free-firmware
+deb-src http://mirror.shatel.ir/debian bookworm-backports main contrib non-free non-free-firmware
+
+
+# Debian Forky
+# debian.org Debian Sid For Debian Sid
+deb http://deb.debian.org/debian sid main
+
+###### NOT WORKS NOW 14050111
+# iut.ac.ir Debian Sid For Debian Sid
+deb http://repo.iut.ac.ir/debian/ sid main contrib non-free non-free-firmware
+deb http://repo.iut.ac.ir/debian/ sid-updates main contrib non-free non-free-firmware
+
+# runflare.com Debian Sid For Debian Sid
+deb http://mirror-linux.runflare.com/debian/ sid main contrib non-free non-free-firmware
+
+# ito.gov.ir Debian Sid For Debian Sid
+deb https://archive.ito.gov.ir/debian/ sid main contrib non-free non-free-firmware
+
+
+# Debian Forky
+# ito.gov.ir Debian Forky For Debian Forky
+deb https://archive.ito.gov.ir/debian/ forky main contrib non-free non-free-firmware
+deb https://archive.ito.gov.ir/debian/ forky-updates main contrib non-free non-free-firmware
+deb https://archive.ito.gov.ir/debian/ forky-proposed-updates main contrib non-free non-free-firmware
+deb https://archive.ito.gov.ir/debian/ forky-backports main contrib non-free non-free-firmware
+
+
+# Debian Stable
+# ito.gov.ir Debian Stable For Debian Stable
+deb https://archive.ito.gov.ir/debian/ stable main contrib non-free non-free-firmware
+deb https://archive.ito.gov.ir/debian/ stable-updates main contrib non-free non-free-firmware
+deb https://archive.ito.gov.ir/debian/ stable-proposed-updates main contrib non-free non-free-firmware
+deb https://archive.ito.gov.ir/debian/ stable-backports main contrib non-free non-free-firmware
