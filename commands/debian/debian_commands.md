@@ -31,6 +31,7 @@
 | `sysctl -a`                                                                       | Shows kernel's parameters                         | **Rarely**                                                    |
 | `sysctl --system`                                                                 | Save your changes                                 |                                                               |
 | `lsb_release -cs`                                                                 | Check your distro                                 | **Rarely**                                                    |
+| `sed -i 's/#Port 22/Port 22/g' /etc/ssh/sshd_config`                              | Uncomment Port22, and use it                      | **Rarely**                                                    |
 
 sudo code . --user-data-dir --no-sandbox
 
@@ -315,7 +316,7 @@ Now yor changes applied!
 
 ## OpenVPN3 Commands
 
-| Command                                                                                                   | What it does                      
+| Command                                                                                                   | What it does                      |
 |-----------------------------------------------------------------------------------------------------------|-----------------------------------|
 | `openvpn3 config-import --config /PATH_TO_FILE/OVPN_CONFIG.ovpn --name NEW_CONFIG_FILE --persistent`      | New Config File                   |
 | `openvpn3 config-manage --show --config NEW_CONFIG_FILE`                                                  | Show Config File                  |
@@ -331,13 +332,15 @@ Now yor changes applied!
 
 ## Ansible Commands
 
-| Command                                                                                                   | What it does                      
-|-----------------------------------------------------------------------------------------------------------|-----------------------------------|
-| `ansible -i inventory/host.yaml all -m ping`      |                    |
-| `ansible-playbook -i hosts.yaml /PATH_TO_PLAYBOOK/PLAYBOOK.yml`      | Run your playbook file                   |
-| `ansible-playbook -i hosts.yaml /PATH_TO_PLAYBOOK/PLAYBOOK.yml --ask-become-pass`      | Ask sudo password if needed                   |
-| `ansible-playbook -i hosts.yaml /PATH_TO_PLAYBOOK/PLAYBOOK.yml --list-servers`      | Servers which playbook will execute on                   |
-| `ansible-playbook -i hosts.yaml /PATH_TO_PLAYBOOK/PLAYBOOK.yml --list-tags`      | Tags which playbook will execute them                   |
+| Command                                                                                   | What it does                                  |
+|-------------------------------------------------------------------------------------------|-----------------------------------------------|
+| `ansible -i inventory/host.yaml all -m ping`                                              | Get pong response from all defined hosts      |
+| `ansible-playbook -i hosts.yaml /PATH_TO_PLAYBOOK/PLAYBOOK.yml`                           | Run your playbook file                        |
+| `ansible-playbook -i hosts.yaml /PATH_TO_PLAYBOOK/PLAYBOOK.yml --ask-become-pass`         | Ask sudo password if needed                   |
+| `ansible-playbook -i hosts.yaml /PATH_TO_PLAYBOOK/PLAYBOOK.yml --list-servers`            | List hosts which playbook will execute on     |
+| `ansible-playbook -i hosts.yaml /PATH_TO_PLAYBOOK/PLAYBOOK.yml --list-tags`               | Tags which playbook will execute them         |
+| `ansible-playbook -i hosts.yaml --limit=tools-server /PATH_TO_PLAYBOOK/PLAYBOOK.yml`      | Will execute on just `tools-server` host      |
+| `ansible-playbook -i hosts.yaml  /PATH_TO_PLAYBOOK/PLAYBOOK.yml --tags=set_apt_mirror`    | Will run just `set_apt_mirror` tags           |
 
 ***[🔝 Table Of Contents](#table-of-contents)***
 
