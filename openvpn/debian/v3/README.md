@@ -23,7 +23,7 @@ For disconnecting your sessin using it's alias:
 openvpn3 session-manage --config <MY_CONFIG_NAME> --disconnect
 ```
 
-# List of commands Al-In-One 
+# List of commands All-In-One 
 ---
 layout: docs
 page_title: Vagrantfile

@@ -1,14 +1,15 @@
 # Some Debian Commands
 
 ## Table Of Contents
+
 - [Basic Commands](#basic-commands)
-- [Apt Commands](#apt-commands)
+- [Apt Commands](apt-commands)
 - [Disk Management](#disk-management)
-    * [DF Command](#df-command)
-    * [Volume Groups](#volume-groups)
+  - [DF Command](#df-command)
+  - [Volume Groups](#volume-groups)
 - [Network Managing Commands](#network-managing-commands)
 - [Firewalls](#firewalls)
-    * [IPTables Commands](#iptables-commands)
+  - [IPTables Commands](#iptables-commands)
 - [SSH](#ssh)
 - [Git Commands](#git-commands)
 - [Docker Commands](#docker-commands)
@@ -36,21 +37,6 @@
 sudo code . --user-data-dir --no-sandbox
 
 ***[🔝 Table Ofcreate-swap-file Contents](#table-of-contents)***
-
----
-
-
-## Apt Commands
-| Command                       | What it does                                                  | When to use it        |
-|-------------------------------|---------------------------------------------------------------|-----------------------|
-| `apt update`                  | Update packages                                               | **Often**     |
-| `apt upgrade`                 | Upgrade packages                                              | **Often**     |
-| `apt full-upgrade`            | Upgrade packages                                              | **Often**     |
-| `apt install PACKAGE`         | Install packages                                              | **Often**     |
-| `apt remove PACKAGE`          | Remove packages                                               | **Often**     |
-| `apt modernize-sources`       | Delete `sources.list` file and write a modern syntax file     | **Better to use**     |
-
-***[🔝 Table Of Contents](#table-of-contents)***
 
 ---
 
